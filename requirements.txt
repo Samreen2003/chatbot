@@ -1,10 +1,2 @@
 streamlit>=1.0.0
 google-generativeai
-
-
-pip install streamlit
-pip install -q -U google-genai
-python, pip, Add to path
-streamlit account
-GitHub repository
-gemini API
