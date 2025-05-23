@@ -67,7 +67,7 @@ with st.form(key="chat_form", clear_on_submit=True):
         if user_input.strip():
             response = getResponseFromModel(user_input)
             st.session_state["history"].append((user_input, response))
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.warning("⚠️ Please enter a valid message.")
 
@@ -75,7 +75,7 @@ with st.form(key="chat_form", clear_on_submit=True):
 if st.session_state["history"]:
     if st.button("🧹 Clear Chat"):
         st.session_state["history"] = []
-        st.experimental_rerun()
+        st.rerun()
 
 # Display chat history with styled bubbles
 if st.session_state["history"]:
